@@ -7,7 +7,8 @@ import Total from './components/Total';
 import { connect } from 'react-redux';
 
 const App = (props) => {
-  
+  console.log(props)
+  console.log(props.car)
 
   const removeFeature = item => {
     // dispatch an action here to remove an item
@@ -24,7 +25,7 @@ const App = (props) => {
         <AddedFeatures car={props.car} />
       </div>
       <div className="box">
-        <AdditionalFeatures store={props.AdditionalFeatures} />
+        <AdditionalFeatures store={props.additionalFeatures} />
         <Total car={props.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -35,7 +36,7 @@ const mapStateToProps = state =>{
   console.log(state);
   return {
     car: state.features.car,
-    additionalFeatures: state.features.AdditionalFeatures,
+    additionalFeatures: state.features.additionalFeatures,
     additionalPrice: state.features.additionalPrice
   };
 }
