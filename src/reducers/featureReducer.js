@@ -1,7 +1,4 @@
-import * as featureActions from '../actions/featureActions';
-
-
-
+import {ADD_FEATURE, REMOVE_FEATURE} from '../actions/featureActions';
 
 
 const initialState = {
@@ -26,6 +23,10 @@ const initialState = {
     console.log(action, state);
 
     switch (action.type){
+        case ADD_FEATURE: 
+            return {state};
+        case REMOVE_FEATURE:
+            return {state};
         default: return state;
     }
   }
