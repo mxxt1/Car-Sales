@@ -24,7 +24,7 @@ const initialState = {
 
     switch (action.type){
         case ADD_FEATURE: 
-            return {state};
+            return {...action.payload};
         case REMOVE_FEATURE:
             return {state};
         default: return state;

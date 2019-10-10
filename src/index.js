@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import {composeWithDevTools} from 'redux-devtools-extension';
 import {Provider} from 'react-redux';
 import rootReducer from './reducers'
 import App from './App';
@@ -8,7 +10,13 @@ import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-const store = createStore(rootReducer)
+const middleware=[thunk];
+
+const store = createStore(
+    rootReducer, 
+    composeWithDevTools(applyMiddleware(...middleware))
+    
+    );
 
 
 

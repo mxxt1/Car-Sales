@@ -4,11 +4,14 @@
 
 export const ADD_FEATURE = 'ADD_FEATURE';
 
-export const addFeature = (featureArray, feature) => {
-    
-    
-    
-    const action = {type: ADD_FEATURE, payload: {featureArray, feature}};
+export const addFeature = (state, feature) => {
+    console.log(state);
+    console.log(feature);
+    state.car.features.push(feature);
+    state.additionalFeatures = state.additionalFeatures.filter(item => item !== feature);
+    console.log(state.additionalFeatures);
+    console.log(state.car.features);
+    const action = {type: ADD_FEATURE, payload:state};
     return action;
 };
 
