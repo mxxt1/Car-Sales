@@ -3,7 +3,14 @@
 
 
 export const ADD_FEATURE = 'ADD_FEATURE';
-export const addFeature = (featureID) => ({type: ADD_FEATURE, payload: featureID});
+
+export const addFeature = (featureArray, feature) => {
+    
+    
+    
+    const action = {type: ADD_FEATURE, payload: {featureArray, feature}};
+    return action;
+};
 
 
 export const REMOVE_FEATURE = 'REMOVE_FEATURE';
