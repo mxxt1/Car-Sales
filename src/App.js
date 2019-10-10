@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 // import {addFeature, removeFeature} from './actions';
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
@@ -22,10 +22,10 @@ const App = (props) => {
     <div className="boxes">
       <div className="box">
         <Header car={props.car} />
-        <AddedFeatures car={props.car} />
+        <AddedFeatures />
       </div>
       <div className="box">
-        <AdditionalFeatures store={props.additionalFeatures} />
+        <AdditionalFeatures  />
         <Total car={props.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
