@@ -6,7 +6,10 @@ export const ADD_FEATURE = 'ADD_FEATURE';
 
 export const addFeature = (state, feature) => {
     // console.log(state);
-    // console.log(feature);
+    console.log(feature);
+    console.log(state.car.price, state.additionalPrice);
+    state.car.price += feature.price;
+    state.additionalPrice += feature.price;
     state.car.features.push(feature);
     state.additionalFeatures = state.additionalFeatures.filter(item => item !== feature);
     // console.log(state.additionalFeatures);
@@ -20,7 +23,8 @@ export const REMOVE_FEATURE = 'REMOVE_FEATURE';
 export const removeFeature = (state, feature) => {
     // console.log(state);
     // console.log(feature);
-    
+    state.car.price -= feature.price;
+    state.additionalPrice -= feature.price;
     state.additionalFeatures.push(feature);
     state.car.features = state.car.features.filter(item => item !== feature);
     console.log(state.car.features);
