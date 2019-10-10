@@ -20,13 +20,13 @@ const initialState = {
 
   export const featureReducer = (state=initialState, action) => {
 
-    console.log(action, state);
+    // console.log(action, state);
 
     switch (action.type){
         case ADD_FEATURE: 
             return {...action.payload};
         case REMOVE_FEATURE:
-            return {state};
+            return {...action.payload};
         default: return state;
     }
   }

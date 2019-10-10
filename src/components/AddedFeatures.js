@@ -1,6 +1,6 @@
 import React from 'react';
-
 import AddedFeature from './AddedFeature';
+// import {connect} from 'react-redux';
 
 const AddedFeatures = props => {
   console.log(props);
@@ -19,5 +19,6 @@ const AddedFeatures = props => {
     </div>
   );
 };
+
 
 export default AddedFeatures;

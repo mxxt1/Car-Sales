@@ -3,14 +3,14 @@ import {addFeature} from '../actions';
 import {connect} from 'react-redux';
 
 const AdditionalFeature = props => {
-  console.log(props);
+  // console.log(props);
 
   const clickHandler = e => {
     e.preventDefault();
-    console.log(props.feature)
-    console.log(props.additionalFeatures)
-    console.log(props.state)
-    console.log(props.state.car)
+    // console.log(props.feature)
+    // console.log(props.additionalFeatures)
+    // console.log(props.state)
+    // console.log(props.state.car)
 
     props.addFeature(props.state, props.feature)
 
@@ -25,7 +25,7 @@ const AdditionalFeature = props => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
+  // console.log(state);
   return{
     state: state.features,
     addedFeatures: state.features.car.features,
