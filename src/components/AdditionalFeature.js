@@ -28,8 +28,8 @@ const mapStateToProps = state => {
   // console.log(state);
   return{
     state: state.features,
-    addedFeatures: state.features.car.features,
-    additionalFeatures: state.features.additionalFeatures
+    // addedFeatures: state.features.car.features,
+    // additionalFeatures: state.features.additionalFeatures
   }
 };
 
